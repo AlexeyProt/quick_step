@@ -1,0 +1,253 @@
+@media screen and (max-width: 480px) {
+/* Контент */
+	div.borderText {
+		width: 100%;
+	}
+	.floor select, .floor input {
+		max-width: 150px;
+	}
+	/* Коллекции */
+	.mainPageContainer .content .line {
+		grid-template-columns: 1fr;
+	}	
+	.mainPageContainer .content .line > div:nth-child(3)	{
+		grid-row-start: 2;
+		text-align: center;
+		grid-column: 2;		
+	}
+/* Корзина	 */
+	form.cart {
+		width: 100%;
+		padding: 0;
+	}
+	div.cart div.table {
+		display: block;
+	}
+	form.cart > div.table:first-child div, form.cart > div.table:nth-last-child(2) div {
+		display: table-cell;
+	}
+	div.table > div {
+		display: inline-block;
+		margin: 5px;
+		padding: 0;
+		vertical-align: inherit;
+	}
+	/* Окно корзины */
+	.cartCategoriesWindow .table {
+		display: grid;
+	}	
+}
+@media screen and (max-width: 1024px) {
+	/* Шапка */
+	.logo {
+		width: 230px;
+	}
+	.mainContainer {
+		width: 100%;
+	}
+	/* Контент */
+	h1, h3 {
+		font-size: 20px;
+	}
+	.content {
+		display: block;
+		width: 90%;
+	}
+	.content > div.imageContainer, .content div.textContainer {
+		display: block;
+		width: 100%;
+		margin: auto;
+		padding: 0;
+	}
+	.content img {
+		/* width: 100%; */
+		height: initial;
+	}
+	.commentPhoto img {
+		width: 50px;
+	}
+	.productsList div.table {
+		display: block;
+	}
+	.productsList div.table > div {
+		display: block;
+		margin: auto;
+	}
+	.content div.textContainer div.container {
+		grid-template-columns: 1fr;
+	}
+	/* Корзина */
+	.cart .table, .cart .footing, .cart .cartServices .table {
+		grid-template-columns: 1fr;
+	}		
+	/* Меню */
+	ul.horMenu {
+		display: none;
+	}
+	div[data-device="mobile"], a[data-device="mobile"] {
+		overflow-x: hidden;
+		display: block;
+		visibility: visible;
+		opacity: 1;
+	}
+	div[data-device="decktop"] {
+		display: none;
+	}
+	/* Слайдер */
+	#slider {
+		height: 105px;
+	}
+	.slideText {
+		font-size: 25px;
+	}
+	button.left, button.right {
+		top: 35px;
+	}
+	/* Просмотр изображений */
+	div.scrollContainer .imageShow {
+		padding: 10px;
+	}
+	/* Иконки */
+	div.category svg {
+		width: 150px;
+		height: 150px;
+	}
+	/* Подвал */
+	div.footer {
+		display: block;
+	}
+	div.footer > div.innerContainer{
+		display: block;
+	}
+	div.footer div.textContainer {
+		display: block;
+	}
+	div.footer .innerContainer .textContainer:last-child {
+		width: 90%;
+	}
+	ul.horDownMenu {
+		display: inherit;
+	}	
+	ul.horDownMenu li {
+		display: inherit;
+	}
+}
+/* Шапка */
+[data-device="mobile"] svg#mobileLogo {
+	height: 100px;
+}
+div.header[data-device="mobile"] {
+	margin: auto;
+	margin-top: 40px;
+}
+/* Мобильный список */
+.mobileList {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+	font-family: Arial;
+}
+h3 {
+	margin: 0;
+}
+/* Мобильное меню */
+[data-device="mobile"] {
+	display: none;
+}
+#mobileMenu {
+	height: 40px;
+}
+.mobileMenuContainer {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.mobileMenuBackground {
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+div#mobileMenu .mobileList {
+	width: 265px;
+	margin-left: -265px;
+	background-color: #003e77;
+}
+.mobileList li {
+	position: relative;
+	border-bottom: solid 1px #6387ca;
+}
+.mobileList a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 12px;
+}
+.forwardButton {
+	position: absolute;
+	width: 15px;
+	height: 30px;
+	top: 7px;
+	right: 12px;
+	background-image: url('/images/forwardButton.svg');
+}
+.headerMobileMenuContainer {
+	display: table-cell;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.headerMobileMenu {
+	display: table;
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+}
+.titleMobileMenu {
+	display: table-cell;
+	position: relative;
+	width: 100%;
+	font-size: 16px;
+	font-family: Camria, Arial;
+	vertical-align: middle;
+}
+.titleMobileMenu a {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+.titleMobileMenu svg {
+	width: 100%;
+	height: 21px;
+}
+#mobileMenu svg.phone {
+	display: table-cell;
+	position: relative;
+	width: 150px;
+	height: 100%;	
+	vertical-align: middle;
+}
+[data-device="mobile"] svg.phone {
+	position: relative;
+}
+.mobileAdres svg.phone {
+	width: 230px;
+}
+.menuButtonContainer {
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
+}
+.headerMobileMenu .cartIcon {
+	width: 60px;
+	height: 100%;
+	cursor: pointer;
+}

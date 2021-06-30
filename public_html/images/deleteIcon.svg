@@ -1,0 +1,17 @@
+<svg class="deleteIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="15px" height="17px" viewBox="0 0 62 60" stroke="#000">
+<title>Удалить</title>
+<style type="text/css">
+	.deleteIcon {
+		stroke: #004fa3;
+	}
+	.deleteIcon:hover{
+		stroke: #ec008c;
+	}
+</style>	 
+<defs>
+</defs>
+<path fill="none" stroke-width="3px"
+	d="M54,9.5v44c0,0-1,6-23,6s-23-6-23-6v-44 M62,9.5H31c0,0-31,0-31,0 M50,9.5c0,0,0-9-3-9s-16,0-16,0s-13,0-16,0
+	s-3,9-3,9 M20,16.5v34 M42,16.5v34"/>
+</svg>

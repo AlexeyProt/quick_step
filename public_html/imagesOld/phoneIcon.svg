@@ -1,0 +1,15 @@
+<svg class="phoneIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 100 100">
+	<defs>
+		<style>.blackCircle{fill:url(#blackCircleGradient);}.orangeCircle{fill:#ff9600;}
+		.handset {
+			stroke: #003e77;
+			fill: none;
+			stroke-width: 1px;
+		}</style>
+	</defs>
+	<g id="orangeCircle" transform="rotate(0 50 50) scale(3.6) translate(-36 -36)">
+		<g id="handset" transform="rotate(0 50 50)">
+			<path class="handset" d="M42,38.21s-4.61,4.29-4,8.09,9.88,14.17,13.52,15.06,5.72.54,7.29-.4A27.65,27.65,0,0,0,62,58l-5.1-4.61s-1.62,2.51-4.29,2.27-7.12-5.75-7.12-5.75a4.2,4.2,0,0,1-.65-2.42c.08-1.38,2.19-4,2.19-4Z"/>
+		</g>
+	</g>
+	</svg>

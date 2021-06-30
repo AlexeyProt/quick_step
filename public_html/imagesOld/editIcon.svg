@@ -1,0 +1,17 @@
+<svg class="editIcon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="15px" height="17px" stroke="#000"
+	 viewBox="0 0 245 240" style="overflow:visible;enable-background:new 0 0 233.7 236.47;"
+	 xml:space="preserve">
+<title>Редактировать</title>
+<style type="text/css">
+	.editIcon:hover{
+		stroke: red;
+	}
+</style>
+<path fill="none" stroke-width="11px" d="M199.5,74.05V225c0,6.06-4.91,10.97-10.97,10.97H11.47c-6.06,0-10.97-4.91-10.97-10.97V47.94
+	c0-6.06,4.91-10.97,10.97-10.97h155"/>
+<path fill="none" stroke-width="7px" d="M110.13,127.03l13.59,11.8l-28.44,19.01L110.13,127.03z M229.72,3.09c-6.79-5.9-12.04,0.14-12.04,0.14
+	l-5.65,6.51l13.59,11.8l5.65-6.51C231.27,15.03,236.52,8.99,229.72,3.09z M110.13,127.03l13.59,11.8l101.9-117.3l-13.59-11.8
+	L110.13,127.03z"/>
+<rect x="163.07" y="-2.95" transform="matrix(0.7549 0.6558 -0.6558 0.7549 89.755 -92.0774)" fill="none" stroke-width="3px" width="10" height="154"/>
+</svg>

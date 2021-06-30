@@ -1,0 +1,41 @@
+<svg class="cartIcon"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="139px" height="96px" viewBox="30 0 139 96" style="overflow:auto">
+<style type="text/css">
+	.cartGroup{filter:url(#red-glow);}
+	.black, .st2{fill:none;stroke:#ec008c;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<filter  filterUnits="userSpaceOnUse" height="200%" id="red-glow" width="200%" x="-50%" y="-50%">
+	<!--  blur the text at different levels -->
+	<feGaussianBlur  in="SourceGraphic" result="blur5" stdDeviation="0"></feGaussianBlur>
+	<feGaussianBlur  in="SourceGraphic" result="blur10" stdDeviation="5"></feGaussianBlur>
+
+	<!--  merge all the blurs except for the first one  -->
+	<feMerge  result="blur-merged">
+		<feMergeNode  in="blur10"></feMergeNode>
+	</feMerge>
+	<!--  recolour the merged blurs red -->
+	
+		<feColorMatrix  in="blur-merged" result="red-blur" type="matrix" values="1 0 0 0 0                              0 0.06 0 0 0                              0 0 0.44 0 0                              0 0 0 1 0">
+		</feColorMatrix>
+	<feMerge>
+		<feMergeNode  in="red-blur"></feMergeNode>
+		<!--  largest blurs coloured red  -->
+		<feMergeNode  in="blur5"></feMergeNode>
+		<!--  smallest blur left white  -->
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+		<!--  original white text  -->
+	</feMerge>
+</filter>
+<path class="black" d="M53.5,71.5c-2.6,0-4.8-2.1-4.8-4.8s2.1-4.8,4.8-4.8s4.8,2.1,4.8,4.8S56.1,71.5,53.5,71.5z M96.8,66.8
+		c0-2.6-2.1-4.8-4.8-4.8s-4.8,2.1-4.8,4.8s2.1,4.8,4.8,4.8S96.8,69.4,96.8,66.8z M46.8,61.5l57-11l-1-20l-60,1L46.8,61.5z
+		 M98.8,61.5c-17.3,0-34.7,0-52,0 M42.8,31.5l-3-7h-5" style="stroke: #004fa3;"></path>
+<g class="cartGroup" style="opacity:0;">
+	<text x="110" y="70" style="font-size: 42px;fill: #ec008c;font-family: serif;">10</text>
+	<path class="st2" d="M53.5,71.5c-2.6,0-4.8-2.1-4.8-4.8s2.1-4.8,4.8-4.8s4.8,2.1,4.8,4.8S56.1,71.5,53.5,71.5z M96.8,66.8
+		c0-2.6-2.1-4.8-4.8-4.8s-4.8,2.1-4.8,4.8s2.1,4.8,4.8,4.8S96.8,69.4,96.8,66.8z M46.8,61.5l57-11l-1-20l-60,1L46.8,61.5z
+		 M98.8,61.5c-17.3,0-34.7,0-52,0 M42.8,31.5l-3-7h-5"/>
+</g>
+</svg>

@@ -1,0 +1,31 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 class="progress" x="0px" y="0px" width="194px" height="194px" viewBox="-48 -48 300 300"
+	 style="width: 29px;height: 29px;">
+<defs>
+	<filter filterUnits="userSpaceOnUse" id="red-glow-progress" x="-50%" y="-50%" height="200%" width="200%">
+		<!--  blur the text at different levels -->
+		<feGaussianBlur in="SourceGraphic" result="blur0" stdDeviation="0"></feGaussianBlur>
+		<feGaussianBlur in="SourceGraphic" result="blur20" stdDeviation="20"></feGaussianBlur>
+
+		<!--  merge all the blurs except for the first one  -->
+		<feMerge result="blur-merged">
+			<feMergeNode in="blur20"></feMergeNode>
+		</feMerge>
+		<!--  recolour the merged blurs red -->
+		
+			<feColorMatrix in="blur-merged" result="red-blur" type="matrix" values="1 0 0 0 0                              0 0.06 0 0 0                              0 0 0.44 0 0                              0 0 0 1 0">
+			</feColorMatrix>
+		<feMerge>
+			<feMergeNode in="red-blur"></feMergeNode>
+			<!--  largest blurs coloured red  -->
+			<feMergeNode in="blur0"></feMergeNode>
+			<!--  smallest blur left white  -->
+			<feMergeNode in="SourceGraphic"></feMergeNode>
+			<!--  original white text  -->
+		</feMerge>
+	</filter>
+</defs>
+<path d="M97,6c50.18,0,91,40.82,91,91s-40.82,91-91,91c-50.18,0-91-40.82-91-91S46.82,6,97,6" 
+	  stroke-dasharray="572" stroke-dashoffset="0" transform="rotate(0 97 97)"
+	  fill="none" stroke="#ff6060" stroke-width="12" filter="url(#red-glow-progress)"/>
+</svg>

@@ -1,0 +1,1464 @@
+body {
+	margin: 0%;
+	color: #004fa3;
+	font-family: sans-serif;
+}
+#background, #sidebarBG {
+	position: fixed;
+	top: 0;
+	width: inherit;
+	height: 100%;
+	display: none;
+}
+img {
+	border: solid #004fa3 1px;
+}
+select {
+	max-width: 267px;
+}
+template {
+	display: none;
+}
+.wrapper {
+	display: table;
+	width: 100%;
+	position:relative;
+	top: 60px;
+}
+/* Верхнее меню */
+#headerMenu {
+	height: 40px;
+	overflow: hidden;
+	visibility: visible;
+	opacity: 1;
+	box-shadow: 0px 0px 4px 1px;
+}
+.headerMenu {
+	display: table;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	background-color: white;
+}
+.headerMenu .cartIcon {
+	width: 60px;
+	height: 100%;
+	cursor: pointer;
+}
+/* Сайдбар */
+.sidebar {
+	display: table-cell;
+	position: relative;
+	top: 0;
+	width: 20%;
+	height: 100%;
+	background-position: 66%;
+	background-repeat: no-repeat;
+	background-size: cover;		
+}
+.sidebar ul {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	background-color: #828282;
+	font-family: Arial;
+}
+.sidebar > ul {
+	background-color: #acacac;
+}
+.sidebar li {
+	position: relative;
+	border-bottom: solid 1px #6e6e6e;
+}
+.sidebar li:hover {
+	background-color: #333;
+}
+.sidebar > div {
+	position: relative;
+	width: 100%;
+	top: 100%;
+	margin-top: -28px;
+/* 	background-color: rgba(0, 0, 0, 0.64); */
+}
+.sidebar .icons, .footer .icons {
+	display: table;
+	margin: auto;
+	font-size: 24px;
+	list-style: none;
+	padding: 0;
+}
+.sidebar .icons li, .footer .icons li {
+	display: table-cell;
+	padding: 0 10px;	
+}
+.sidebar a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 12px;
+}
+.main {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.mainContainer {
+	display: table-cell;
+	position: relative;
+	width: 100%;
+}
+/* Горизонтальное меню */
+.horMenuContainer {
+	display: table;
+	margin: auto;
+	width: 100%;
+	background-color: #004fa3;
+}
+.horMenuContainer > div {
+	display: flex;
+	padding: 0 10px;
+}
+.horMenuContainer > div > div{
+	display: flex;
+	margin: auto;
+}
+.horMenuContainer .horMenu a {
+	color: #fff;
+}
+.horMenuContainer .horMenu a:hover {
+	color: #e16db2;
+}
+.horMenu {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 18px;
+	height: 23px;
+	display: table;
+	margin: auto;
+	padding: 0%;
+	list-style: none;	
+}
+.horMenu li:hover {
+/* 	background-color: #e7feff; */
+	/*! background-color: rgba(189, 61, 61, 0.76); */
+}
+.horMenu a:hover {
+	color: #004fa3;
+}
+.horMenu li {
+	display: table-cell;
+}
+.horMenu a {
+	text-decoration: none;
+	color: #63728c;
+	padding: 8px 15px;
+	display: block;
+}
+.subMenu {
+	display: none;
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	padding: 0;
+}
+.subMenu li {
+	display: block;
+	position: relative;
+}
+/* Нижнее горизонтальное меню */
+ul.horDownMenu {
+	display: table;
+	text-align: left;
+	width: 95%;
+	margin: auto;
+	padding: 0%;
+	list-style: none;
+}
+ul.horDownMenu a {
+	text-decoration: none;
+}
+ul.horDownMenu > li {
+	padding: 0px 7px;
+}
+ul.horDownMenu li {
+	display: table-cell;
+	font-weight: bold;
+	padding-top: 10px;
+}
+ul.horDownSubMenu {
+	padding: 0;
+}
+ul.horDownSubMenu li {
+	display: block;
+	font-weight: initial;
+	font-size: 12px;
+}
+/* Вертикальное меню */
+.vertMenu {
+	display: table-cell;
+	width: 270px;
+	min-width: 25%;
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: gray;
+	font-family: Arial;
+}
+.vertMenu li {
+    position: relative;
+    border-bottom: solid 1px #6e6e6e;
+}
+.vertMenu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+}
+/* Формы */
+.scrollContainer { /* Изменить класс */
+	visibility: hidden; /* Удалить */
+	opacity: 0;  /* Удалить */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	z-index: 1;
+}
+.hidden {
+	position: absolute; 
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0; 	
+}
+.hidden .scrollContainer {
+	visibility: inherit;
+	opacity: inherit;
+}
+.hidden .light {
+	position: fixed;
+	z-index: 1;
+}
+.formContainer {
+	display: table;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.formInnerContainer {
+	display: table-cell;
+	position: relative;
+	height: 100%;
+	vertical-align: middle;
+}
+.formContent {
+	position: relative;
+	text-align: center;
+    font-family: Cambria;
+}
+form .caption {
+	font-size: 24px;
+	color: #004fa3;
+}
+div.button {
+	display: table;
+	position: relative;
+	width: 198px;
+	height: 43px;
+	margin: auto;
+	border-radius: 6px;
+	color: white;
+	font-size: 20px;
+	background: linear-gradient(to bottom, #004fa3 0%,#8599be 100%);
+	cursor: pointer;
+}
+div.button:hover, .miniButton:hover {
+	background: linear-gradient(to bottom, #002d57 0%,#6e7f9d 100%);
+}
+div.button  div.innerContainer {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.miniButton {
+	background: linear-gradient(to bottom, #4d4d4d 0%,#a6a6a6 100%);
+	font-size: 15px;
+	color: white;
+	padding: 4px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+/* inline кнопки */
+.buttons {
+	text-align: center;	
+}
+.buttons .button {
+	display: inline-table;
+}
+.centerLink {
+	display: table;
+	color: #004fa3;
+	margin: auto;
+	font-size: 18px;
+}
+#formBackground, #imageShowBackground {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+#imageShowBackground {
+	opacity: 0;
+}
+#openClose {
+	display: none;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+.light {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.close {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: -12px;
+	right: -12px;
+}
+.filename {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100px;	
+}
+/* Форма поиска */
+.searchFormContainer {
+	max-width: 700px;
+	margin: auto;
+	position: relative;
+}
+.searchFormContainer > div:first-child {
+	display: flex;
+	padding: 17px;
+}
+.searchFormContainer > div:last-child {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.searchFormContainer ul, .pagesList {
+	list-style: none;
+	padding: 10px 0;
+	margin: -17px 17px;
+	background-color: white;
+	text-align: left;
+	font-family: arial,sans-serif;
+	font-size: 19px;
+	cursor: default;
+}
+.pagesList {
+	background-color: initial;
+	margin: 0;
+	padding: 0;
+}
+.pagesList li {
+	display: grid;
+	grid-auto-columns: max-content;
+	grid-column-gap: 3px;
+	grid-template-columns: auto;	
+	display: -ms-grid;
+	-ms-grid-columns: 1fr 3px;
+	-ms-grid-rows: 1fr 1fr;	
+}
+.pagesList a:nth-child(2) {
+	grid-column-start: 1;
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;	
+}
+.pagesList div:nth-child(3) {
+	grid-column-start: 3;
+	grid-row-start: 1;
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;	
+}
+.searchFormContainer li, .pagesList li {
+	padding: 8px 10px;
+}
+.searchFormContainer li:hover, .pagesList li:hover {
+	background-color: #e6e6e6;
+}
+.pagesList li a {
+	font-size: 15px;
+	color: blue;
+}
+li[data-page-li-selected="true"] {
+	background-color: #ffbaba;
+}
+li[data-page-li-selected="true"]:hover {
+	background-color: #ff9b9b;
+}
+li[data-page-li-selected="true"] div:last-child {
+	font-size: 15px;
+	font-style: italic;
+}
+[data-search-selected="true"] form, [data-search-selected="true"] > div > div {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-color: rgba(223,225,229,0);
+	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+[data-search-selected="true"] ul {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-color: rgba(223,225,229,0);
+	box-shadow: 0 4px 6px 0 rgba(32,33,36,0.28);
+}
+[name="search"], .searchFormContainer > div > div {
+	display: flex;
+	width: 100%;
+	padding: 0;
+}
+[name="search"] > div, .searchFormContainer > div > div > div {
+	width: 100%;
+	position: relative
+}
+[name="search"] input, .searchFormContainer > div > div input {
+	border-radius: 0;
+	margin: 0;
+	border: solid 1px #bbb;
+}
+[name="search"] .progressContainer, .searchFormContainer > div > div .progressContainer {
+	position: absolute;
+	top: 2px;
+	right: 0;
+}
+[name="search"] .openButton, .searchFormContainer > div > div .openButton {
+	width: 38px;
+	height: 31px;
+	border-radius: 0;
+}
+[name="search"] .searchIcon, .searchFormContainer > div > div .searchIcon {
+	width: 38px;
+	height: 16px;
+	margin-top: 7px;
+}
+.progressContainer {
+	display: table;
+	margin: auto;
+/* 	position: absolute;
+	left: 50%; */
+	position: relative;
+	height: 29px;
+}
+.progress {
+	position: relative;
+	left: -50%:
+}
+.horMenuContainer [data-search-selected="true"] form, .horMenuContainer [data-search-selected="true"] > div > div {
+	box-shadow: 0 1px 6px 0 rgb(255, 57, 57);
+}
+/* Фильтр */
+.filter {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+}
+/* Сортировка столбцов */
+[data-sortable-column] div {
+	display: flex;
+	display: -ms-flex;
+}
+.indicatorContainer {
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+}
+/* Окна */
+.window {
+	/* max-width: 405px; */
+	max-width: initial;
+	display: table;
+}
+/* Форма обратной связи */
+form {
+	position: relative;
+	max-width: 368px;
+	margin: auto;
+	padding: 17px
+}
+form input, form textarea {
+	width: 100%;
+	border: solid 1px #004fa3;
+	border-radius: 6px;
+	box-sizing: border-box;
+	font-size: 19px;
+	margin: 6px 0px;
+	padding: 3px 8px;
+}
+form input[data-kind="warning"] {
+	border: solid 1px red;
+}
+form input[type="checkbox"] {
+	width: 13px;
+}
+form input[type="submit"] {
+	width: 100px;
+	display: block;
+	margin: auto;
+	margin-top: 24px;
+}
+form select {
+	width: 120px;
+}
+.notice[data-kind="succes"] {
+	color: #004fa3;
+	font-family: impact;
+	text-align: center;
+}
+.notice[data-kind="warning"], .noticeFile[data-kind="warning"] {
+	color: red;
+}
+.noticeFile img {
+	height: 100%;
+	padding-top: 4px;
+}
+label {
+	text-align: center;
+}
+label div {
+	font-size: 14px;
+	margin-bottom: 7px;
+}
+/* Шапка */
+
+.header div.innerContainer {
+	display: table;
+	margin: auto;
+	text-align: center;
+}
+#flower {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 28%;
+	max-width: 154px;
+}
+/* Подвал */
+.footer {
+	background-color: #004fa3;
+}
+.footer > div.innerContainer {
+	display: table;
+	margin: auto;
+	text-align: center;
+	color: white;
+}
+.footer div.textContainer div.adresContainer {
+	width: 100%;
+	padding-top: 20px;
+	font-size: 16px;
+	text-align: left;
+	
+}
+.footer div.textContainer {
+	display: table-cell;
+	width: inherit;
+	vertical-align: top;
+	font-size: 16px;
+	text-align: left;
+	padding: 8px;
+	font-family: Cambria;
+}
+.footer .logo {
+	width: 85px;
+	padding: 0;
+}
+.footer .innerContainer .textContainer:last-child {
+	width: 371px;
+}
+.footer a {
+	color: #8599be;
+}
+.footer .innerContainer > div {
+	display: inline-block;
+	margin: 10px;
+	vertical-align: top;	
+}
+.footer .innerContainer ul {
+	list-style: none;
+	padding: 0;
+}
+.footer .innerContainer li {
+	list-style: none;
+	padding: 0;
+	margin: 4px 0;
+}
+/* Логотип */
+.logo {
+	display: table-cell;
+	width: 330px;
+	height: 100px;
+}
+/* Телефон и адрес */
+@media screen and (max-width: 870px) {
+	div.phoneContainer {
+		position: relative;
+		margin: auto;
+	}
+}
+div.header .phoneContainer, div.header  .adresContainer,  div.header .textContainer {
+	display: table-cell;
+	width: 249px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20px;
+	font-family: Cambria;
+} 
+.phoneContainer {
+	
+}
+.phoneContainer div.innerContainer, .adresContainer div.innerContainer {
+	display: table;
+	width: 354px;
+}
+.adresContainer div.innerContainer {
+	width: 245px;
+}
+div.icon, div.icon  {
+    display: table-cell;
+    width: 14px;
+    height: 14px;
+	padding-right: 9px;
+	vertical-align: bottom;
+}
+div.icon  {
+    background-position: center;
+	background-image: url('/images/icons/place.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.phone {
+	width: 190px;
+}
+.phoneContainer svg.phone {
+	display: table-cell;
+}
+.phoneContainer a {
+	text-decoration: none;
+	vertical-align: top;
+}
+.adresContainer span {
+	vertical-align: top;
+}
+a[title="WhatsApp"] img {
+	width: 25px;
+	height: 25px;
+}
+a[title="Viber"] img {
+	width: 25px;
+	height: 25px;
+}
+.openButton {
+	display: table;
+	position: relative;
+	width: 198px;
+	height: 43px;
+	margin: auto;
+	border-radius: 6px;
+	color: white;
+	background: linear-gradient(to bottom, #600039 0%,#ec008c 100%);
+	cursor: pointer;
+	text-decoration: none;
+}
+.openButton[data-not_available="true"] {
+	cursor: initial;
+}
+.openButton:hover, .openButton[data-not_available="true"] {
+	background: linear-gradient(to bottom, #004fa3 0%,#7a94b0 100%)
+}
+.openButton div.innerContainer {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 20px;
+	font-family: Cambria;
+}
+.openButton .cartIcon {
+	width: 60px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.phones {
+	display: grid;
+	position: absolute;
+	margin: 0 5px;
+	grid-template-columns: 40px 1fr auto;
+}
+.phones > div {
+	display: grid;
+}
+.phones > .phoneIcon {
+	align-self: center;
+}
+.header a {
+	text-decoration: none;
+}
+.header .openButton {
+	margin: 1px auto;
+}
+.adres {
+	position: absolute;
+	right: 0;
+	display: grid;
+	width: 250px;
+	margin: 0 5px;
+}
+.adres .phone {
+	width: 100%;
+}
+.WhatsApp {
+	text-decoration: none;
+}
+.WhatsApp .openButton {
+	background: linear-gradient(to bottom, #6fff7c 0%,#2dca3f 100%);
+	width: 222px;
+}
+.WhatsApp .openButton .innerContainer {
+	font-size: 17px;
+	font-family: sans-serif;	
+}
+/* Кнопка добавления в корзину */
+[data-cart-added] {
+	
+}
+/* Корзина */
+.cart {
+	width: 50%;
+	max-width: inherit;
+	margin: auto;
+	display: table;
+}
+.cart > div.table, .cart #products > div.table {
+	width: 100%;
+	padding: 5px;
+	border-bottom: solid #004fa3 1px;
+}
+.cart div.table div:first-child {
+	display: table;
+}
+.cart div.table div:first-child div:first-child {
+	display: table-cell;
+	padding-right: 15px;
+	vertical-align: middle;
+}
+.cart div.table > div {
+	/* width: 25%; */
+	text-align: center;
+}
+.cart div.table div:first-child img {
+	max-width: 100px;
+	min-width: 50px;
+	vertical-align: middle;
+	display: table-cell;
+
+}
+.cart div.table [name="select"] {
+	margin: auto;
+
+}
+form.cart input, form.cart textarea {
+	margin: 6px 5px;
+}
+.cart .table {
+	display: grid;
+	grid-template-columns: 10px repeat(6, 1fr);
+	border-bottom: solid 1px;
+	padding: 5px 0;	
+}
+.order .table {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.cart div.table > div {
+	align-self: center;
+	justify-self: center;
+}
+.cart .cartServices .table {
+	grid-template-columns: 10px repeat(5, 1fr);
+}
+.order .cartServices .table {
+	grid-template-columns: repeat(4, 1fr);
+}
+.cartServices > .table {
+	border-bottom: solid 1px;
+	padding: 5px 0;
+	width: 100%;
+}
+.cartCategoriesWindow .table {
+	display: flex;
+	border-bottom: solid 1px;
+	padding: 5px 0;
+
+}
+.cartCategoriesWindow .table > div {
+	align-self: center;
+}
+.cart .footing {
+	grid-template-columns: repeat(3, 1fr);
+}
+.order .footing {
+	grid-template-columns: repeat(2, 1fr);
+}
+/*! Слайдер */
+
+#slider {
+	display: table;
+	position: relative;
+	width: 100%;
+	height: 320px;
+}
+
+#frame {
+	overflow: hidden;
+	
+}
+
+.slide {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	margin-top: 0px;
+	background-color: white;
+	background-size: cover;
+	display: inline-block;
+	background-position: center;
+}
+
+.slideText{
+    position: absolute;
+    background-color: #004fa34f;
+    color: white;
+    bottom: 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+#slides {
+	white-space: nowrap;
+	position: relative;
+	left: 0%;
+}
+
+button.left, button.right {
+	position: absolute;
+	top: 150px;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	z-index: 1;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, 0.48);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	border: none;
+	font-size: 25px;
+	font-family: sens-serif;
+	text-align: center;
+	cursor: pointer;
+	display:none;
+}
+
+button.left:hover, button.right:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #004fa3;
+	border: solid #004fa3 1px;
+}
+
+#slider:hover button.left, #slider:hover button.right {
+	display: block;
+}
+
+button.left {
+	background-image: url('/images/backButton.svg');
+	left:5px;
+}
+button.right {
+	background-image: url('/images/forwardButton.svg');
+	right:5px;
+}
+/* Контент */
+h1, h3 {
+	text-align: center;
+	color: #004fa3;
+}
+h4  a {
+	color: #ff9600;
+}
+.content {
+	display: table;
+	width: 95%;
+	max-width: 1300px;
+	margin: auto;
+	padding: 15px;
+	padding-top: 0;
+	color: #004fa3;
+	/* opacity: 0; */
+}
+.content div.imageContainer {
+	display: table-cell;
+	width: 40%;
+	text-align: center;
+}
+.imageContainer p {
+	font-family: Arial;
+	font-weight: bold;
+}
+.price {
+	font-size: 30px;
+}	
+}
+.product_stock {
+	font-size: 18px;	
+}
+.imageContainer img {
+	max-width: 100%;
+	max-height: 350px
+}
+.miniCont {
+	margin: 10px;
+}
+.miniCont img {
+	/* max-width: 220px; */
+	max-height: 150px;
+}
+.content div.textContainer {
+	display: table-cell;
+	width: 60%;
+	padding-left: 55px;
+	vertical-align: top;
+	font-family: sans;
+}
+.content div.textContainer img, .content > img {
+	float:left;
+	max-width: 40%;
+	padding: 20px;
+	padding-left: 0;
+}
+.content .textContainer .container {
+	display: grid;	
+	grid-template-columns: 1fr 1fr;	
+	display: -ms-grid;
+	-ms-grid-columns: 1fr 1fr;
+}
+.content .textContainer .container table {
+	-ms-grid-column: 2;
+}
+.content .container .characteristics > div {
+	display: flex;
+}
+.content .container .characteristics > div img {
+	margin: auto;
+}
+.floor {
+	margin: 0 10px;
+}
+.floor > div, #mountingServices > div {
+	margin: 30px 0px;
+}
+.floor .row {
+	border-bottom: solid #004fa3 1px;
+	padding: 10px 0;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	-ms-grid-columns: 1fr 2fr;
+	-ms-grid-column: 1;
+	display: -ms-grid;
+}
+.floor .row > div:first-child {
+	-ms-grid-column: 1;
+	align-self: center;
+}
+.floor .row > div:last-child, .floor input {
+	-ms-grid-column: 2;
+	font-size: 19px;
+	font-family: sans-serif;
+}
+.floor .floorButton:last-child {
+	border-bottom: none;
+	display: block;
+	margin: 10px;
+}
+.productsList {
+	margin: 15px;
+	color: #ff9600;
+	font-weight: bold;
+	text-align: center;
+	font-family: Arial;
+	min-height: 416.5px;
+}
+.productsList .product, .productsList .category {
+	display: inline-block;
+}
+.productsList .product .characteristics {
+	font-size: 13px;
+}
+.productsList .product .characteristics .bright {
+	color: #8599be;
+}
+.productsList a, .productsList .cont {
+	display: inline-block;
+	width: 210px;
+	height: 143px;
+	text-decoration: none;
+	vertical-align: top;
+	color: #63728c;
+	padding: 12px;
+	margin: 2px;
+}
+.productsList a:hover {
+	color: #004fa3;
+}
+.productsList a.icon, .productsList .cont {
+	height: inherit;
+}
+.productsList a.icon img {
+	border: none;
+}
+.productsList div.imageContainer {
+	height: 120px;
+	width: 40%;
+}
+.productsList h4 {
+	/* height: 17px;	 */
+	font-size: 16px;
+	margin: 0;
+	min-height: 72px;
+}
+.productsList img {
+	display: block;
+	max-width: 100px;
+	max-height: 100px;
+	border: solid 1px;
+	margin: auto;
+}
+.productsList div.table {
+	width: 75%;
+	margin: auto;
+	color: #33375c;
+	font-weight: initial;
+	font-family: initial;
+}
+.productsList div.table > div {
+	text-align: left;
+}
+.productsList div.table img {
+	border: none;
+}
+[data-modul="gallery"] {
+	margin: auto;
+	background-color: #004fa3;
+	margin-bottom: 10px;
+}
+[data-gallery="text"] {
+	margin: auto;
+	background-color: #004fa3;
+	color: white;
+}
+.mainPageContainer .content {
+	max-width: inherit;
+	width: 100%;
+	padding: 0;
+}
+.mainPageContainer .content h2 {
+	text-align: center;
+	/* margin: 0; */
+}
+.mainPageContainer .content .line {
+	/* background: linear-gradient(to bottom, #fff 0%,#c3e0ff 100%); */
+	background: none;
+	border-bottom: solid;
+}
+.mainPageContainer .content .line {
+	display: grid;
+	grid-template-columns: minmax(92px, 1fr) fit-content(100%) minmax(92px, 1fr);
+}
+.mainPageContainer .content .line .productsList {
+	margin: 0;
+}
+.mainPageContainer .content .line > div:first-child, .mainPageContainer .content .line > div:nth-child(3) {
+	width: inherit;
+	max-width: inherit;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	align-self: start;
+	text-align: right;	
+}
+.mainPageContainer .productsList h4 {
+	min-height: initial;
+}
+/* Виджет количества */
+.quantityVidjet {
+	display: table;
+	margin: auto;
+}
+.quantityVidjet span:first-child, .quantityVidjet span:last-child {
+	background-color: #8599be;
+	padding: 5px 10px;
+	border: solid #8599be 1px;
+	display: table-cell;
+	cursor: pointer;
+}
+.quantityVidjet span:first-child {
+	border-radius: 5px 0px 0px 5px;
+}
+.quantityVidjet span:last-child {
+	border-radius: 0px 5px 5px 0px;
+}
+.quantityVidjet span:nth-child(2) {
+	padding: 5px 10px;
+	border: solid #8599be 1px;
+	display: table-cell;
+}
+.line {
+	background-image: url('/images/laminatBackWhite.jpg');
+	background-size: cover;
+	width: 100%;
+}
+.line > div {
+	width: 95%;
+	max-width: 1300px;
+	margin: auto;
+	padding: 2px;
+}
+/* Вкладки */
+#tabsContainer [data-tab], .tabsContainer [data-tab] {
+	display: none;
+}
+#tabsContainer ul.tabs, .tabsContainer ul.tabs {
+	border-bottom: solid 1px #004fa3;
+}
+#tabsContainer ul.tabs li, .tabsContainer ul.tabs li  {
+	display: inline-block;
+	margin-bottom: -1px;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#tabsContainer ul.tabs li[data-status="active"], .tabsContainer ul.tabs li[data-status="active"] {
+	border: solid 1px #004fa3;
+	border-bottom: solid 1px white;
+}
+/* Возврат на предыдущию страницу */
+.back {
+	height: 21px;
+	position: relative;
+	margin-top: 5px;
+}
+.back a {
+	position: absolute;
+	right: 15px;
+	color: #004fa3;
+	font-family: Arial;	
+}
+/*Таблицы*/
+table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+	margin: auto;
+}
+th {
+	background-color: #33375c;
+	color: white;
+}
+th:last-child , td:last-child {
+	/* text-align: right; */
+}
+tr:nth-child(odd) {
+  background: #b2c1dd;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tr:hover {
+  background: #ecc8dd;
+}
+table img {
+	max-width: 100px;
+}
+caption {
+	font-weight: bold;
+}
+/* Просмотр изображений */
+div.show .scrollContainer {
+	opacity: 1;
+}
+div.scrollContainer > .innerConteiner {
+	display: table;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+div.scrollContainer .imageShow {
+	position: relative;
+	padding: 25px;
+}
+div.imageShow .container {
+	position: relative;
+}
+div.scrollContainer .imageShow img {
+	display: block;
+	width: 100%;
+}
+[data-name="show"] {
+	cursor: pointer;
+}
+/* Табличная верстка */
+div.table {
+	display: table;
+	margin: auto;
+}
+div.table > div {
+	display: table-cell;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+/* Комментарии */
+.commentContainer {
+	border-bottom: solid #727272 1px;
+	padding: 15px 0;
+}
+.commentPhoto {
+	display: table-cell;
+}
+.commentPhoto img {
+	width: 50px;
+	border-radius: 50%;
+}
+.commentTextCont {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 10px;
+}
+.commentText {
+	padding-top: 3px;
+}
+.commentDate {
+	color: #666;
+	white-space: nowrap;
+}
+/* Пагинация */
+.pagination {
+	display: table;
+	margin: auto;
+	margin-top: 20px;
+	padding: 0;
+}
+.pagination .disabled {
+	display: none;
+}
+.pagination .active {
+	font-weight: bold;
+}
+.pagination li {
+	display: table-cell;
+	padding: 0 7px;
+}
+.pagination a {
+	text-decoration: none;
+	color: #63728c;
+}
+/* Древовидный список */
+.tree, 
+.tree ul,
+.tree li {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	list-style: none;
+	user-select: none; 
+}
+.tree ul {
+	margin: 0px 0px 0px 2px;
+	display: none;
+	padding-left: 6px;
+}
+.tree [data-tree="dropped out"] > ul {
+	display: block;
+	height: inherit;
+}
+.tree > li,
+.tree li li {
+	position: relative;
+	padding: .2em 0 0 1.2em; /* отступ до текста; для раскрывающегося списка в ряде случаев (в Хроме есть баг) padding-top (.2em) лучше указывать в px */
+}
+.tree li:not(:last-of-type) {
+	border-left: 1px solid #ccc; /* толщина, цвет и стиль (вместо сплошной пунктирная или точечная) вертикальной линии */
+}
+.tree li li:before,
+.tree > li:not(:only-of-type):before { /* горизонтальная линия */
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.1em; /* не более отступа до текста (1.2em) */
+	height: .7em; /* начинается приблизительно с половины высоты буквы (.5em + .2em) */
+	border-bottom: 1px solid #ccc;
+}
+.tree li:last-of-type:before { /* вертикальная линия последнего пункта в каждом списке */
+	width: calc(1.1em - 1px); /* для перфекционистов */
+	border-left: 1px solid #ccc;
+}
+.tree > div[data-sortable="before"] {
+	opacity: 0;
+	height: 20px;
+}
+.tree [data-tree="open"], .tree [data-tree="close"] {
+	position: absolute;
+	left: -.5em;
+	top: 0.15em;
+	width: 0.9em;
+	/* height: .9em; */
+	line-height: .9em;
+	text-align: center;
+	background: #fff;
+	font-size: 125%;
+	cursor: pointer;
+	display: grid;
+	display: ms-grid;
+}
+.tree [data-tree="open"] .childItemsCount, .tree [data-tree="close"] .childItemsCount {
+	font-size: 11px;
+	margin-top: -6px;
+	font-weight: bold;
+}
+.tree [data-tree="close"] {
+	top: 0em;
+}
+.tree [data-tree-selected="true"], .tree [data-tree-child-selected] {
+	color: #d70000;
+}
+.tree[data-sorter-moving="true"] * {
+	cursor: move;
+}
+/* Редактор меню */
+#menuEditor li {
+	padding-top: 4px;
+}
+#menuEditor .itemContainer {
+	display: table;
+	width: 100%;
+	max-width: 300px;
+}
+
+#menuEditor li.create:before, #menuEditor > li.create:not(:only-of-type):before { 
+	height: .7em; 
+}
+#menuEditor li li:before, #menuEditor > li:not(:only-of-type):before { 
+	height: 1.5em; 
+}
+#menuEditor [data-tree="open"] {
+	top: .75em;
+}
+#menuEditor  [data-tree="close"] {
+	top: .65em;
+}
+#menuEditor .itemContainer > div{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	grid-column-gap: 3px;
+	border: solid 1px #004fa3;
+	padding: 4px;	
+	background-color: #d5d5d5;
+	display: -ms-grid;
+	-ms-grid-columns: 1fr 3px;
+	-ms-grid-rows: 1fr 1fr;
+	cursor: move;
+}
+#menuEditor .name {
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+}
+#menuEditor .link {
+	margin-top: 6px;
+	font-size: 15px;
+	color: blue;
+	grid-column-start: 1;
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+}
+#menuEditor .create {
+	cursor: pointer;
+}
+#menuEditor .create:hover {
+	color: #004fa3;
+}
+#menuEditor .icons {
+	grid-column-start: 3;
+	grid-row-start: 1;
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;	
+}
+#menuEditor .icons > div {
+	display: table-cell;
+	padding: 0 2px;
+}
+#menuEditor [data-sorter-selected="true"] > .itemContainer {
+	/* box-shadow: 0px 0px 4px 1px #ff5050; */
+	/* border-radius: 5px; */
+	padding: 0px;
+	opacity: 0.5;
+}
+.snackbar {
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	background-color: #000000c9;
+	color: white;
+	padding: 15px;
+	z-index: 1;
+}
+/* Иконки */
+.deleteIcon, .editIcon {
+	cursor: pointer;
+}
+/* Карата */
+#map {
+	width: 100%;
+	min-width: 300px;
+	height: 400px;
+}
+/* Списки */
+/* Редактор tinymce */
+#tinymce {
+	background-color: white;
+}
+/* reCAPTCHA */
+.repaptchaNotice {
+	color: #5f8bb3;
+	font-size: 15px;
+	text-align: center;
+}
+.repaptchaNotice a {
+	color: #487dae;
+}
+.grecaptcha-badge { 
+	visibility: hidden;
+}

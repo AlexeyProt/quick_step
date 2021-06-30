@@ -1,0 +1,78 @@
+form {
+	max-width: inherit;
+}
+form input, form textarea {
+	display: block;
+	width: 100%;
+}
+.cart .customer {
+	width: 100%;
+	padding: 0 5px;
+	border-bottom: none;
+}
+.customer div {
+	padding: 5px;
+	border-bottom: solid black 1px;
+}
+.customer div:nth-child(even) {
+	background-color: #d0d0d0;
+}
+.cart > div{
+	width: 100%;
+	padding: 5px;
+	border-bottom: solid black 1px;
+}
+.cart > div:nth-child(even) {
+	background-color: #d0d0d0;
+}
+.cart > div:hover {
+	background-color: #fcffca;
+}
+div.customer:hover {
+	background-color: initial;
+}
+.cart .customer > div:hover {
+	background-color: #fcffca;
+}
+[contenteditable] {
+	cursor: pointer;
+	font-weight: bold;
+	padding: 3px;
+}
+[data-focus] {
+	background-color: #ffe560;
+	cursor: inherit;
+}
+#categories {
+	color: #63728c;
+	margin-left: 10px;
+}
+#categories .name {
+	cursor: pointer;
+}
+#categories .catalogIcon {
+	background-image: url(/images/catalogIcon.svg);
+	width: 16px;
+	height: 20px;
+}
+#categories .name:hover, .tree .catalogCont:hover, #categories [data-tree="open"]:hover, #categories [data-tree="close"]:hover {
+	color: #004fa3;
+}
+#categories [data-tree-selected="true"]:hover, #categories [data-tree-child-selected]:hover {
+	color: #9f0404;
+}
+.tree .catalogCont {
+	display: grid;
+	grid-template-columns: 19px 1fr;
+	cursor: pointer;	
+}
+.tree .catalogCont > span {
+	align-self: center;
+}
+tr {
+	display: grid;
+	grid-template-columns: 142px 1fr 200px 112px 85px;
+}
+td {
+	align-self: center;
+}

@@ -1,0 +1,20 @@
+.mobileMenu2 {
+	list-style: none;
+	/* margin: 0; */
+	padding: 0;
+	background-color: black;
+	font-family: Arial;
+}
+.mobileMenu2 li {
+	border-bottom: solid 1px #6e6e6e;
+}
+.mobileMenu2 a {
+	text-decoration: none;
+	color: white;
+}
+
+element.style {
+    margin: auto;
+    width: 100%;
+    background-color: gray;
+}
